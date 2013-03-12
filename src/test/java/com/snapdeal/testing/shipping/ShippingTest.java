@@ -67,6 +67,7 @@ import com.snapdeal.testing.helper.ApiHelper;
 import com.snapdeal.testing.helper.DatabaseHelper;
 
 public class ShippingTest extends ShippingTestBase {
+	System.out.println("Starting of the program");
 	// This method will provide data to any test method that declares that its
 	// Data Provider
 	// is named "createShippingGroupCode"
