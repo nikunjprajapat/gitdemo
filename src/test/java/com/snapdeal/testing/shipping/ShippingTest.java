@@ -1,4 +1,4 @@
-package com.snapdeal.testing.shipping;
+﻿package com.snapdeal.testing.shipping;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -67,7 +67,8 @@ import com.snapdeal.testing.helper.ApiHelper;
 import com.snapdeal.testing.helper.DatabaseHelper;
 
 public class ShippingTest extends ShippingTestBase {
-	System.out.println("Starting of the program");
+	System.out.println("Starting of the program"); 
+        System.out.println("Starting of the program second time");
 	// This method will provide data to any test method that declares that its
 	// Data Provider
 	// is named "createShippingGroupCode"
