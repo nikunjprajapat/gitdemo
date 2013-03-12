@@ -1,0 +1,97 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.snapdeal.test</groupId>
+	<artifactId>TestShippingAPI</artifactId>
+	<version>1.0</version>
+	<packaging>jar</packaging>
+	<name>TestShippingAPI</name>
+	<url>http://maven.apache.org</url>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<repositories>
+
+		<repository>
+			<id>snapshots</id>
+			<name>libs-snapshot</name>
+			<url>http://10.125.1.150:8080/libs-snapshot</url>
+		</repository>
+		<repository>
+			<id>central</id>
+			<name>libs-release</name>
+			<url>http://10.125.1.150:8080/libs-release</url>
+		</repository>
+
+	</repositories>
+	<dependencies>
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>6.1.1</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>shipping.client</groupId>
+			<artifactId>ShippingClient</artifactId>
+			<version>1.9-SNAPSHOT</version>
+			<scope>compile</scope>
+		</dependency>
+		
+		<dependencies>
+    <!--  Gson: Java to Json conversion -->
+    <dependency>
+      <groupId>com.google.code.gson</groupId>
+      <artifactId>gson</artifactId>
+      <version>2.2.2</version>
+      <scope>compile</scope>
+    </dependency>
+</dependencies>
+		
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.12.4</version>
+				<configuration>
+					<systemPropertyVariables>
+						<environment>${env.USER}</environment>
+					</systemPropertyVariables>
+					<suiteXmlFiles>
+						<suiteXmlFile>testng.xml</suiteXmlFile>
+					</suiteXmlFiles>
+				</configuration>
+			</plugin>
+			 <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>cobertura-maven-plugin</artifactId>
+                <version>2.2</version>
+                <configuration>
+                    <formats>
+                        <format>xml</format>
+                    </formats>
+          			<instrumentation>
+        		    <includes>
+        		      <include>C:\Users\chhavi.suri\.m2\repository\shipping\client\ShippingClient\1.9-SNAPSHOT</include>
+       			     </includes>
+       			   </instrumentation>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>cobertura</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+			
+			</plugins>
+	</build>
+	</project>

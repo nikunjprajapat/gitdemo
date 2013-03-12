@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite hostname="L-chhavi-QA" name="com.snapdeal.testing.shipping.ShippingTest" tests="1" failures="0" timestamp="17 Jan 2013 07:26:02 GMT" time="4.701" errors="0">
+  <testcase name="getActiveShippingProvider" time="4.676" classname="com.snapdeal.testing.shipping.ShippingTest"/>
+</testsuite>

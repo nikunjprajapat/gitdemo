@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="ShippingAPI" parallel="methods" thread-count="5">
+  <test name="ShippingTest">
+    <classes>
+      <class name="com.sanpdeal.qa.AppTest"/>
+      <class name="com.snapdeal.testing.shipping.ShippingTest"/>
+    </classes>
+  </test> <!-- ShippingTest -->
+</suite> <!-- ShippingAPI -->
